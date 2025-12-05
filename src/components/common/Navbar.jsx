@@ -4,6 +4,7 @@ import { FaBars, FaSun, FaMoon, FaSignOutAlt } from "react-icons/fa";
 import toast from "react-hot-toast";
 import useAuth from "../../hooks/useAuth";
 import { FaChartLine } from "react-icons/fa";
+import { MdOutlineCurrencyExchange } from "react-icons/md";
 const Navbar = () => {
   const { user, logOut } = useAuth();
   const navigate = useNavigate();
@@ -121,7 +122,7 @@ const Navbar = () => {
 
         <Link to="/" className="btn btn-ghost text-2xl font-bold gap-0">
           <span className="text-primary flex items-center gap-2">
-            <FaChartLine className="text-3xl" />
+            <MdOutlineCurrencyExchange className="text-3xl" />
             Loan
           </span>
           <span className="text-base-content">Link</span>

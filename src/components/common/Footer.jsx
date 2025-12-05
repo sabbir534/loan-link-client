@@ -13,6 +13,7 @@ import {
   FaShieldAlt,
   FaClock,
 } from "react-icons/fa";
+import { MdOutlineCurrencyExchange } from "react-icons/md";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -24,7 +25,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center justify-center gap-2">
               <Link to="/" className="flex items-center gap-2">
-                <FaChartLine className="text-3xl text-primary" />
+                <MdOutlineCurrencyExchange className="text-3xl text-primary" />
                 <span className="text-2xl font-bold">
                   <span className="text-primary">Loan</span>
                   <span className="text-base-content">Link</span>
