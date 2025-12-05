@@ -91,7 +91,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50 px-4">
+    <div className="navbar bg-base-100 shadow-sm sticky top-0 z-50 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -119,7 +119,6 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Logo */}
         <Link to="/" className="btn btn-ghost text-2xl font-bold gap-0">
           <span className="text-primary flex items-center gap-2">
             <FaChartLine className="text-3xl" />
@@ -129,14 +128,11 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* Navbar Center: Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">{navLinks}</ul>
       </div>
 
-      {/* Navbar End: Auth Logic & Theme Toggle */}
       <div className="navbar-end gap-3">
-        {/* Theme Toggle Button */}
         <button
           onClick={toggleTheme}
           className="btn btn-circle btn-ghost btn-sm"
@@ -149,7 +145,6 @@ const Navbar = () => {
         </button>
 
         {user ? (
-          // After Login View
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
@@ -194,7 +189,6 @@ const Navbar = () => {
             </ul>
           </div>
         ) : (
-          // Before Login View
           <div className="hidden lg:flex gap-2">
             <Link to="/login" className="btn btn-ghost hover:text-primary">
               Login
