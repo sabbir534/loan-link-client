@@ -6,7 +6,7 @@ import useAuth from "../../hooks/useAuth";
 import { FaChartLine } from "react-icons/fa";
 import { MdOutlineCurrencyExchange } from "react-icons/md";
 const Navbar = () => {
-  const { user, logOut } = useAuth();
+  const { user, logOut, loading } = useAuth();
   const navigate = useNavigate();
 
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
@@ -76,7 +76,7 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      {user && (
+      {!loading && user && (
         <li>
           <NavLink
             to="/dashboard"
@@ -104,7 +104,7 @@ const Navbar = () => {
           >
             {navLinks}
 
-            {!user && (
+            {!loading && !user && (
               <div className="flex flex-col gap-2 mt-2">
                 <Link
                   to="/login"
@@ -145,7 +145,9 @@ const Navbar = () => {
           )}
         </button>
 
-        {user ? (
+        {loading ? (
+          <span className="loading loading-dots loading-md text-primary"></span>
+        ) : user ? (
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}

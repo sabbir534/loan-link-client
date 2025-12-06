@@ -13,6 +13,7 @@ import {
   FaShieldAlt,
   FaClock,
 } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
 import { MdOutlineCurrencyExchange } from "react-icons/md";
 
 const Footer = () => {
@@ -52,7 +53,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300"
               >
-                <FaTwitter className="text-sm" />
+                <BsTwitterX className="text-sm" />
               </a>
               <a
                 href="https://linkedin.com"
